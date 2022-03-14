@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="10dp"
+    android:layout_marginBottom="20dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="@dimen/text_40"
+        android:layout_height="@dimen/text_40"
+        android:padding="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/cross" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="start|center_vertical"
+        android:text="TERMS &amp; CONDITIONS"
+        android:textColor="@color/primaryBlue"
+        android:textSize="@dimen/text_18"
+        android:layout_below="@+id/cross"
+        android:textStyle="bold"
+        android:id="@+id/text"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/text"
+        >
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/dummyTextLightBlack"
+            android:textSize="@dimen/text_14"
+            android:textStyle="normal" />
+
+    </ScrollView>
+
+</RelativeLayout>

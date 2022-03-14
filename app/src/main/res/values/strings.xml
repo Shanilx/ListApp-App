@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ListApp</string>
+    <string name="loginText">Companies, Products &amp; Suppliers</string>
+    <string name="loginTextHeader">to the new way of discovering</string>
+    <string name="invalidMobileNumber">Enter Mobile Number</string>
+    <string name="invalidPassword">Enter Password</string>
+    <string name="hintMobileNumber">Mobile Number</string>
+    <string name="hintPassword">Password</string>
+    <string name="forgotPasswordHeader">Enter your Mobile Number to request</string>
+    <string name="forgotPasswordText">new OTP for password reset</string>
+    <string name="hintOTP">OTP</string>
+    <string name="hintFullName">Your Full Name</string>
+    <string name="enterFullName">Enter Name</string>
+    <string name="hintFarmacyRetailer">Farmacy Retailer</string>
+    <string name="hintSelectOption">Select Option</string>
+    <string name="hintShopName">Firm Name</string>
+    <string name="invalidOTP">Enter OTP</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="dummyContent">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="serverError">Please Check Your Internet Connection and Relaunch the App</string>
+    <string name="networkError">Please Check Your Internet Connection</string>
+    <string name="rs">\u20B9</string>
+    <string name="aboutusOr">or\n Call/WhatsApp us at</string>
+    <string name="netSlow">Your internet connection is too slow</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

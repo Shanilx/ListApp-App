@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/rowIcon"
+            android:layout_width="@dimen/text_40"
+            android:layout_height="@dimen/text_30"
+            android:src="@drawable/tablet" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:paddingLeft="@dimen/text_10"
+        android:paddingRight="@dimen/text_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rowTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Crocin Advance 500MG Tablet"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rowCompanyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingRight="10dp"
+            android:text="Glaxo Smithklin Pharmaceuticals Ltd."
+            android:textAllCaps="true"
+            android:textColor="@color/dummyTextLightBlack"
+            android:textSize="@dimen/text_10"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/rowQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Strip of 15 Tablets"
+            android:textColor="@color/dummyTextLightBlack"
+            android:textSize="@dimen/text_10"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/actionicon"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="1"
+        android:maxHeight="10dp"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+    <LinearLayout
+        android:id="@+id/rowFavourite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".15"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/favouriteIcon"
+            android:layout_width="@dimen/text_40"
+            android:layout_height="@dimen/text_30"
+            android:src="@drawable/favourite_icon"
+            android:visibility="gone"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

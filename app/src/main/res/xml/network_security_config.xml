@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">listapp.in</domain>
+        <trust-anchors>
+          &lt;!&ndash;  <certificates src="@raw/listapp_cir" />&ndash;&gt;
+            <certificates src="@raw/new_file" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>-->
+
+<network-security-config>
+<!--    //https://android-developers.googleblog.com/2016/07/changes-to-trusted-certificate.html-->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">listapp.in</domain>
+        <domain includeSubdomains="true">https://listapp.in/</domain>
+        <domain includeSubdomains="true">http://listapp.in/</domain>
+        <trust-anchors>
+            <!-- Trust preinstalled CAs -->
+            <certificates src="system" />
+            <!-- Additionally trust user added CAs -->
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

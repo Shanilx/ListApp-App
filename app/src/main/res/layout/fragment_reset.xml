@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/header_view" />
+
+        <RelativeLayout
+            android:id="@+id/parentView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RESET PASSWORD?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_20"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="3px"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/primaryYellow" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Please Enter New Password"
+                        android:textColor="@color/dummyTextLightBlack"
+                        android:textSize="@dimen/text_14"
+                        android:textStyle="normal" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_40"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/view_background"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/text_25"
+                            android:layout_weight="@dimen/weight_15"
+                            android:src="@drawable/password" />
+
+                        <EditText
+                            android:id="@+id/resetPassword"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="@dimen/weight_75"
+                            android:background="@null"
+                            android:hint="@string/hintPassword"
+                            android:inputType="textPassword"
+                            android:maxLength="30"
+                            android:paddingLeft="@dimen/normalPadding"
+                            android:paddingRight="@dimen/normalPadding"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/signInVisiblePassword"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:background="@null"
+                            android:hint="@string/hintPassword"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:paddingLeft="@dimen/normalPadding"
+                            android:paddingRight="@dimen/normalPadding"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/resetPasswordShowPassword"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/text_25"
+                            android:layout_weight="@dimen/weight_15"
+                            android:src="@drawable/ic_visibility_off_black_24dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/resetPasswordPasswordError"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_25"
+                        android:gravity="end"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="@dimen/text_18"
+                            android:layout_height="@dimen/text_18"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="2dp"
+                            android:src="@drawable/error_icon" />
+
+                        <TextView
+                            android:id="@+id/passwordErrorText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/invalidPassword"
+                            android:textColor="@color/erroColorRed"
+                            android:textSize="@dimen/text_10" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/resetPasswordSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_40"
+                        android:background="@color/primaryYellow"
+                        android:text="SUBMIT"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_18" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

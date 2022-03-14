@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/header_view" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/text_300"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WELCOME...!!!"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loginTextHeader"
+                    android:textColor="@color/dummyTextLightBlack"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loginText"
+                    android:textColor="@color/dummyTextLightBlack"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/primaryYellow"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout3"
+                android:paddingBottom="10dp"
+                android:text="Enter Mobile Number Here"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_40"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView9"
+                android:background="@drawable/view_background"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/text_25"
+                    android:layout_weight="@dimen/weight_15"
+                    android:src="@drawable/mobile" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/weight_15"
+                    android:gravity="center"
+                    android:text="+91"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_16"/>
+
+                <EditText
+                    android:id="@+id/signInMobileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/weight_75"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:hint="@string/hintMobileNumber"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingLeft="2dp"
+                    android:maxLength="10"
+                    android:paddingRight="@dimen/normalPadding"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signInMobileNumberError"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_25"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout2"
+                android:gravity="end"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="@dimen/text_18"
+                    android:layout_height="@dimen/text_18"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/error_icon" />
+
+                <TextView
+                    android:id="@+id/numberErrorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/invalidMobileNumber"
+                    android:textColor="@color/erroColorRed"
+                    android:textSize="@dimen/text_10" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/signInSubmit"
+                android:layout_width="@dimen/text_50"
+                android:layout_height="@dimen/text_50"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/signInMobileNumberError"
+                android:src="@drawable/next_btn" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

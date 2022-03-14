@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hideKeyboardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="@dimen/text_300"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/shop_icon" />
+
+            <EditText
+                android:id="@+id/retailerShopName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:hint="@string/hintShopName"
+                android:inputType="textCapCharacters"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textAllCaps="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retailerShopNameError"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_20"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Firm Name"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/location" />
+
+            <EditText
+                android:id="@+id/retailerAddress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:hint="Address"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retailerAddressError"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_20"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Address"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/location" />
+
+            <AutoCompleteTextView
+                android:id="@+id/retailerState"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:gravity="center_vertical"
+                android:hint="state"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retailerStateError"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_20"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Select State"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/location" />
+
+            <AutoCompleteTextView
+                android:id="@+id/retailerCity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:hint="city"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retailerCityError"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_20"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Select City"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/location" />
+
+            <EditText
+                android:id="@+id/retailerArea"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Area"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retailerAreaError"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_20"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Area"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/username" />
+
+            <EditText
+                android:id="@+id/retailerFullName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:hint="Your Full Name"
+                android:inputType="text"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retailerFullNameError"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_20"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Your Full Name"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/email_icon" />
+
+            <EditText
+                android:id="@+id/retailerEmail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:enabled="true"
+                android:hint="Email ID"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retailerEmailError"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_20"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Invalid Email ID"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/call" />
+
+            <EditText
+                android:id="@+id/retailerNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:hint="Contact Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_30"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/mobileNumberRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Update Contact Number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="2px"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/retailerNumberError"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:id="@+id/mobileNumberTextError"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Mobile Number"
+                android:textColor="@color/erroColorRed"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/plus" />
+
+            <EditText
+                android:id="@+id/retailerDLN"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:editable="false"
+                android:enabled="false"
+                android:hint="Drug Licence Number"
+                android:inputType="text"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/dlnoRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Request for Change"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="2px"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/plus" />
+
+            <EditText
+                android:id="@+id/tinNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@dimen/weight_85"
+                android:background="@null"
+                android:editable="false"
+                android:enabled="false"
+                android:hint="GSTIN Number"
+                android:inputType="text"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tinNuRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Request for Change"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="2px"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight="@dimen/weight_15"
+                android:src="@drawable/plus" />
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/weight_85"
+                android:gravity="center">
+
+
+                <!--<Spinner-->
+                <!--android:id="@+id/estdNumber"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".85"-->
+                <!--android:textColor="@color/textColor"-->
+                <!--android:textSize="16sp" />-->
+
+                <Spinner
+                    android:id="@+id/estdNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/selectedESTDYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:text="Person available at Store"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+
+        <LinearLayout
+            android:id="@+id/contactFirstNameView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/username" />
+
+            <EditText
+                android:id="@+id/contactFirstName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:hint="Person Name"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/addFirstView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/addFirst"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/text_25"
+                    android:src="@drawable/add" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nameFirstError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="20dp"
+            android:gravity="end"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Name"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contactFirstNumberView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/call" />
+
+            <EditText
+                android:id="@+id/contactFirstNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:digits="0123456789"
+                android:hint="Enter Number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/numberFirstError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="@dimen/text_30"
+            android:gravity="end"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:id="@+id/numberFirstErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Number"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactNameSecondView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/contactSecondNameView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/username" />
+
+            <EditText
+                android:id="@+id/contactSecondName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:hint="Person Name"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/cancelSecondView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/cancelSecond"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/text_25"
+                    android:src="@drawable/minus" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/nameSecondError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="20dp"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Name"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactSecondNumberView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/call" />
+
+            <EditText
+                android:id="@+id/contactSecondNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:digits="0123456789"
+                android:hint="Enter Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/numberSecondError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="@dimen/text_30"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:id="@+id/numberSecondErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Number"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contactThirdNameView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/username" />
+
+            <EditText
+                android:id="@+id/contactThirdName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:hint="Person Name"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/cancelThirdView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/cancelThird"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/text_25"
+                    android:src="@drawable/minus" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/nameThirdError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="20dp"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Name"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contactThirdNumberView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/call" />
+
+            <EditText
+                android:id="@+id/contactThirdNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:digits="0123456789"
+                android:hint="Enter Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/numberThirdError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="@dimen/text_30"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:id="@+id/numberThirdErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Number"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactNameFourthView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/username" />
+
+            <EditText
+                android:id="@+id/contactFourthName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:hint="Person Name"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/cancelFourthView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/cancelFourth"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/text_25"
+                    android:src="@drawable/minus" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nameFourthError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="20dp"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Name"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactNumberFourthView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/call" />
+
+            <EditText
+                android:id="@+id/contactFourthNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:digits="0123456789"
+                android:hint="Enter Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/numberFourthError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="@dimen/text_30"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:id="@+id/numberFourthErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Number"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contactNameFiveView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/username" />
+
+            <EditText
+                android:id="@+id/contactNameFive"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:hint="Person Name"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/cancelFiveView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/cancelFive"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/text_25"
+                    android:src="@drawable/minus" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nameFifthError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="20dp"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Enter Name"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactNumberFiveView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:background="@drawable/view_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_25"
+                android:layout_weight=".15"
+                android:src="@drawable/call" />
+
+            <EditText
+                android:id="@+id/contactFiveNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/view_background"
+                android:digits="0123456789"
+                android:hint="Enter Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/numberFifthError"
+            android:layout_width="@dimen/text225"
+            android:layout_height="@dimen/text_30"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/text_18"
+                android:layout_height="@dimen/text_18"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/error_icon" />
+
+            <TextView
+                android:id="@+id/numberFifthErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Enter Number"
+                android:textColor="@color/erroColorRed"
+                android:textSize="@dimen/text_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_40"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".5"
+                android:background="@color/primaryBlue"
+                android:text="CANCEL"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+            <Button
+                android:id="@+id/retailerSubmit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_40"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".5"
+                android:background="@color/primaryYellow"
+                android:text="UPDATE"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

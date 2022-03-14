@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Enter OTP"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sent on your Mobile Number provided"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/view_background"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"/>
+
+            <EditText
+                android:id="@+id/authenticateOTP"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".85"
+                android:background="@null"
+                android:hint="@string/hintOTP"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:maxLength="15"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/forgotMobileNumberError"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="end"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/error_icon"
+                android:layout_marginRight="2dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/invalidOTP"
+                android:textColor="@color/erroColorRed"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/authenticateOTPSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/primaryYellow"
+            android:text="SUBMIT"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+
+        <LinearLayout
+            android:id="@+id/authenticateOTPResendBtn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/authenticateResendText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Resend OTP"
+                android:textColor="@color/dummyTextLightBlack"
+                android:textSize="16sp"
+                />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="2px"
+                android:background="@color/dummyTextLightBlack"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/authenticationTimer"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="00:15"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="clip_horizontal"
+    >
+
+    <ScrollView
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/llinclude">
+
+               <include
+                   layout="@layout/header_view"/>
+
+           </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/llinclude"
+            android:layout_gravity="center_horizontal">
+
+
+
+            <LinearLayout
+
+                android:layout_width="@dimen/text_300"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="240dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUTHENTICATE &amp; USE "
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="We limit the use of App for "
+                        android:textColor="@color/dummyTextLightBlack"
+                        android:textSize="@dimen/text_14"
+                        android:textStyle="normal" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="specific Users Group"
+                        android:textColor="@color/dummyTextLightBlack"
+                        android:textSize="@dimen/text_14"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:layout_width="140dp"
+                        android:layout_height="3px"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/primaryYellow" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Enter OTP"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sent on your Mobile Number provided"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_40"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/view_background"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/text_25"
+                        android:layout_weight="@dimen/weight_15"
+                        android:src="@drawable/password" />
+
+                    <EditText
+                        android:id="@+id/authenticateOTP"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="@dimen/weight_85"
+                        android:background="@null"
+                        android:digits="0123456789"
+                        android:hint="@string/hintOTP"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        android:maxLength="6"
+                        android:paddingLeft="@dimen/normalPadding"
+                        android:paddingRight="@dimen/normalPadding"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_16" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotMobileNumberError"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_25"
+                    android:gravity="end|center_vertical"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="@dimen/text_18"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/error_icon" />
+
+                    <TextView
+                        android:id="@+id/otpErrorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/invalidOTP"
+                        android:textColor="@color/erroColorRed"
+                        android:textSize="@dimen/text_10" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/authenticateOTPSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_40"
+                    android:background="@color/primaryYellow"
+                    android:text="SUBMIT"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_18" />
+
+                <LinearLayout
+                    android:id="@+id/authenticateOTPResendBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/authenticateResendText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Resend OTP"
+                        android:textColor="@color/dummyTextLightBlack"
+                        android:textSize="@dimen/text_18" />
+
+                    <View
+                        android:layout_width="@dimen/otp_verify_line"
+                        android:layout_height="2px"
+                        android:background="@color/dummyTextLightBlack"
+
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/authenticationTimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="00:15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_18" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+       </RelativeLayout>
+    </ScrollView>
+
+</ScrollView>

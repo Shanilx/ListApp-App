@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="@dimen/text_30"
+            android:src="@drawable/cross"
+            android:id="@+id/cross"
+            android:padding="5dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request For Change"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_20"
+        android:gravity="center_vertical"
+        />
+
+    <CheckBox
+        android:id="@+id/dlnCheck"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_40"
+        android:layout_marginTop="10dp"
+        android:checked="true"
+        android:text="Drug Licence Number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_30"
+        android:background="@drawable/view_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/text_25"
+            android:layout_weight="@dimen/weight_15"
+            android:src="@drawable/plus" />
+
+        <EditText
+            android:id="@+id/retailerDLN"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@dimen/weight_85"
+            android:background="@null"
+            android:hint="New Drug Licence Number"
+            android:inputType="text"
+            android:paddingLeft="@dimen/normalPadding"
+            android:paddingRight="@dimen/normalPadding"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_25"
+        android:gravity="end|center_vertical"
+        android:visibility="visible"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:id="@+id/errorDLNumber"
+
+        >
+
+        <ImageView
+            android:layout_width="@dimen/text_18"
+            android:layout_height="@dimen/text_18"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/error_icon"
+            />
+
+        <TextView
+            android:id="@+id/dlNoError"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:text="Enter Drug Licence Number"
+            android:textColor="@color/erroColorRed"
+            android:textSize="@dimen/text_10" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_30"
+        android:text="GSTIN Number"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18"
+        android:checked="true"
+        android:id="@+id/tinCheck"
+        android:layout_marginBottom="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_30"
+        android:background="@drawable/view_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/text_25"
+            android:layout_weight="@dimen/weight_15"
+            android:src="@drawable/plus" />
+
+        <EditText
+            android:id="@+id/tinNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@dimen/weight_85"
+            android:background="@null"
+            android:hint="New GSTIN Number"
+            android:inputType="text"
+            android:paddingLeft="@dimen/normalPadding"
+            android:paddingRight="@dimen/normalPadding"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_16" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_25"
+        android:gravity="end|center_vertical"
+        android:visibility="visible"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:id="@+id/errorTINumber"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/text_18"
+            android:layout_height="@dimen/text_18"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/error_icon"
+            />
+
+        <TextView
+            android:id="@+id/TINoError"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:text="Enter TIN Number"
+            android:textColor="@color/erroColorRed"
+            android:textSize="@dimen/text_10" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_40"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/primaryYellow"
+        android:text="SUBMIT"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold" />
+
+</LinearLayout>

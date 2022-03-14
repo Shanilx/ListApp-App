@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:scrollbars="none"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/header_view" />
+
+        <FrameLayout
+            android:id="@+id/signupFragmentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/signupParentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal">
+
+            <ScrollView
+                android:layout_width="@dimen/text_300"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="@dimen/text_300"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEW TO APP...?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Just Sign up and be more Informed"
+                        android:textColor="@color/dummyTextLightBlack"
+                        android:textSize="@dimen/text_14"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SIGN UP"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_20" />
+
+                        <View
+                            android:layout_width="@dimen/text_70"
+                            android:layout_height="3px"
+                            android:background="@color/primaryYellow" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_40"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/view_background"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/text_25"
+                                android:layout_weight="@dimen/weight_15"
+                                android:src="@drawable/shop_icon" />
+
+                            <EditText
+                                android:id="@+id/retailerShopName"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_85"
+                                android:background="@null"
+                                android:hint="@string/hintShopName"
+                                android:inputType="textCapCharacters"
+                                android:paddingLeft="@dimen/normalPadding"
+                                android:paddingRight="@dimen/normalPadding"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/retailerShopNameError"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_15"
+                            android:gravity="end"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/text_18"
+                                android:layout_height="@dimen/text_18"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/error_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Enter Firm Name"
+                                android:textColor="@color/erroColorRed"
+                                android:textSize="@dimen/text_10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_40"
+                            android:background="@drawable/view_background"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/text_25"
+                                android:layout_weight="@dimen/weight_15"
+                                android:src="@drawable/mobile" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_15"
+                                android:gravity="center"
+                                android:text="+91"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16" />
+
+                            <EditText
+                                android:id="@+id/signupMobileNumber"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_75"
+                                android:background="@null"
+                                android:digits="0123456789"
+                                android:hint="@string/hintMobileNumber"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="@dimen/normalPadding"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/signupMobileNumberError"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_25"
+                            android:gravity="end"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/text_18"
+                                android:layout_height="@dimen/text_18"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/error_icon" />
+
+                            <TextView
+                                android:id="@+id/numberErrorText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="@string/invalidMobileNumber"
+                                android:textColor="@color/erroColorRed"
+                                android:textSize="@dimen/text_10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_40"
+                            android:background="@drawable/view_background"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/text_25"
+                                android:layout_weight="@dimen/weight_15"
+                                android:src="@drawable/location" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/retailerState"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_85"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="State"
+                                android:maxLines="1"
+                                android:paddingRight="@dimen/normalPadding"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/retailerStateError"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_20"
+                            android:gravity="end"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="@dimen/text_18"
+                                android:layout_height="@dimen/text_18"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/error_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Select State"
+                                android:textColor="@color/erroColorRed"
+                                android:textSize="@dimen/text_10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_40"
+                            android:background="@drawable/view_background"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/text_25"
+                                android:layout_gravity="center"
+                                android:layout_weight="@dimen/weight_15"
+                                android:src="@drawable/location" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/city_id"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_85"
+                                android:background="@null"
+                                android:hint="City"
+                                android:maxLines="1"
+                                android:paddingRight="@dimen/normalPadding"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/city_idError"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_25"
+                            android:gravity="end"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="@dimen/text_18"
+                                android:layout_height="@dimen/text_18"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/error_icon" />
+
+                            <TextView
+                                android:id="@+id/city_idErrorText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Select City"
+                                android:textColor="@color/erroColorRed"
+                                android:textSize="@dimen/text_10" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_40"
+                            android:background="@drawable/view_background"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/text_25"
+                                android:layout_weight="@dimen/weight_15"
+                                android:src="@drawable/password" />
+
+                            <EditText
+                                android:id="@+id/signupPassword"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_75"
+                                android:background="@null"
+                                android:hint="@string/hintPassword"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:maxLength="15"
+                                android:paddingLeft="@dimen/normalPadding"
+                                android:paddingRight="@dimen/normalPadding"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16" />
+
+                            <EditText
+                                android:id="@+id/signupVisiblePassword"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_75"
+                                android:background="@null"
+                                android:hint="@string/hintPassword"
+                                android:inputType="text"
+                                android:maxLength="15"
+                                android:paddingLeft="@dimen/normalPadding"
+                                android:paddingRight="@dimen/normalPadding"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/signInShowPassword"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/text_25"
+                                android:layout_weight="@dimen/weight_15"
+                                android:src="@drawable/ic_visibility_off_black_24dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/signupPasswordError"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_25"
+                            android:gravity="end"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/text_18"
+                                android:layout_height="@dimen/text_18"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/error_icon" />
+
+                            <TextView
+                                android:id="@+id/passwordErrorText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="@string/invalidPassword"
+                                android:textColor="@color/erroColorRed"
+                                android:textSize="@dimen/text_10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_40"
+                            android:background="@drawable/view_background"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/text_25"
+                                android:layout_weight="@dimen/weight_15"
+                                android:src="@drawable/farmacy_reatailer" />
+
+                            <Spinner
+                                android:id="@+id/signupFarmacy"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/weight_85"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/signupFarmacyError"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_25"
+                            android:gravity="end"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/text_18"
+                                android:layout_height="@dimen/text_18"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/error_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Select User Type"
+                                android:textColor="@color/erroColorRed"
+                                android:textSize="@dimen/text_10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp">
+
+                            <CheckBox
+                                android:id="@+id/signupCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/text_30"
+                                android:checked="true"
+                                android:text="I accept the "
+                                android:textColor="@color/dummyTextLightBlack"
+                                android:textSize="@dimen/text_16" />
+
+                            <TextView
+                                android:id="@+id/signupTermsCondition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Terms &amp; Conditions"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/signupNext"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/text_40"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/primaryYellow"
+                            android:text="SUBMIT"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_18" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Already Register? "
+                                android:textSize="@dimen/text_16" />
+
+                            <TextView
+                                android:id="@+id/signupAlreadyRegister"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Sign In"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

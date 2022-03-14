@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentView"
+        android:visibility="gone"
+        >
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/parentView"
+        android:layout_width="320dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/slogo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_100"
+            android:layout_above="@+id/textview1"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/supplier_icon" />
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:gravity="center"
+            android:text="Start Searching"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text28"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/search"
+            android:layout_alignStart="@+id/search"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="SUPPLIER"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_40"
+            android:layout_below="@+id/textView2"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/view_background"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Search Suppliers"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_20"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:src="@drawable/search_icon" />
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ad_view_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/search"-->
+<!--            android:layout_gravity="fill_horizontal"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:orientation="vertical" />-->
+    </RelativeLayout>
+
+</LinearLayout>

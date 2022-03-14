@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_5">5dp</dimen>
+    <dimen name="text_6">6dp</dimen>
+    <dimen name="text_7">7dp</dimen>
+    <dimen name="text_8">8dp</dimen>
+    <dimen name="text_9">9dp</dimen>
+    <dimen name="text_10">12dp</dimen>
+    <dimen name="text_11">11dp</dimen>
+    <dimen name="text_12">12dp</dimen>
+    <dimen name="text_13">13dp</dimen>
+    <dimen name="text_14">14dp</dimen>
+    <dimen name="text_15">25dp</dimen>
+    <dimen name="text_16">16dp</dimen>
+    <dimen name="text_17">17dp</dimen>
+    <dimen name="text_18">18dp</dimen>
+    <dimen name="text_19">19dp</dimen>
+    <dimen name="text_20">20dp</dimen>
+    <dimen name="text_25">20dp</dimen>
+    <dimen name="text_28">28dp</dimen>
+    <dimen name="text_30">30dp</dimen>
+    <dimen name="text_35">35dp</dimen>
+    <dimen name="text_40">40dp</dimen>
+    <dimen name="text_45">45dp</dimen>
+    <dimen name="text_50">50dp</dimen>
+    <dimen name="text_55">55dp</dimen>
+    <dimen name="text_60">60dp</dimen>
+    <dimen name="text_65">65dp</dimen>
+    <dimen name="text_70">75dp</dimen>
+    <dimen name="text_75">75dp</dimen>
+    <dimen name="text_80">80dp</dimen>
+    <dimen name="text_85">85dp</dimen>
+    <dimen name="text_90">90dp</dimen>
+    <dimen name="text_100">100dp</dimen>
+    <dimen name="text_300">300dp</dimen>
+    <dimen name="marginTop10">18dp</dimen>
+    <item name="weight_15" format="float" type="dimen">.1</item>
+    <item name="weight_75" format="float" type="dimen">.8</item>
+    <item name="password_weight" format="float" type="dimen">.7</item>
+    <item name="weight_85" format="float" type="dimen">.9</item>
+    <dimen name="splash_logo">120dp</dimen>
+
+    <dimen name="text28">25dp</dimen>
+
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="nav_header_list">160dp</dimen>
+    <dimen name="nav_header_logo">50dp</dimen>
+    <dimen name="nav_header_appName">30sp</dimen>
+    <dimen name="nav_header_shopName">16sp</dimen>
+    <dimen name="nav_header_address">14sp</dimen>
+
+    <dimen name="toolbar_height">55dp</dimen>
+    <dimen name="toolbar_title">22sp</dimen>
+
+    <dimen name="noItemView_letusknow">20sp</dimen>
+    <dimen name="noItemView_letusknow_sub">16sp</dimen>
+    <dimen name="noItemView_letusknow_spinner">35dp</dimen>
+    <dimen name="noItemView__desription">60dp</dimen>
+    <dimen name="otp_verify_line">100dp</dimen>
+    <dimen name="text225">225dp</dimen>
+    <dimen name="bottom_50">50dp</dimen>
+</resources>
